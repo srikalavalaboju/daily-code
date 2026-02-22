@@ -1,3 +1,4 @@
+"""#linear search using Booolean
 n=int(input("Enter the size:"))
 arr=[]
 for i in range(n):
@@ -12,4 +13,18 @@ for i in range(n):
         print("Element found")
         break
 if not found:
-    print("not found")
+    print("not found")"""
+#without using Boolean
+n=int(input("Enter the size:"))
+arr=[]
+for i in range(n):
+    val=int(input(f"Enter the element{i+1}:"))
+    arr.append(val)
+    print(arr)
+key=int(input("enter the key :"))
+for i in range(n):
+    if arr[i]==key:
+        print("Element found")
+        break
+else:
+    print("Element not found")
