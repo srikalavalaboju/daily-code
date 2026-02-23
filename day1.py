@@ -1,4 +1,4 @@
-"""#linear search using Booolean
+#linear search using Booolean
 n=int(input("Enter the size:"))
 arr=[]
 for i in range(n):
@@ -13,7 +13,7 @@ for i in range(n):
         print("Element found")
         break
 if not found:
-    print("not found")"""
+    print("not found")
 #without using Boolean
 n=int(input("Enter the size:"))
 arr=[]
