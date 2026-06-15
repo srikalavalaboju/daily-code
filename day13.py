@@ -29,8 +29,12 @@ for i in range(len(word)-1,-1,-1):
     print(word[i],end=" ")
 #find whether a number is prime
 n=int(input())
-if n%2==1:
-    print("prime")
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count+=1
+if count == 2:
+    print("prime")        
 else:
     print("Not prime")
 #Print all prime numbers from 1 to N
@@ -71,7 +75,7 @@ print(sum)
 if sum == n:
     print("Armstrong")
 else:
-    print("Not armstrong")"""
+    print("Not armstrong")
 #Check whether a number is a palindrome.
 n=int(input())
 temp=n
@@ -85,6 +89,98 @@ if rev == n:
     print("palindrome")
 else:
     print("not a palindrome")
+#print star
+n=int(input())
+for i in range(1,n+1):
+    for j in range(i):
+        print("*",end=" ")
+    print()
+#reverse right angle stars
+n=int(input())
+for i in range(n,0,-1):
+    for j in range(i):
+        print("*",end=" ")
+    print()
+#print pyramid 
+n=int(input())
+for i in range(1,n+1):
+    space=n-i
+    star=2*i-1
+    print(" "*space + "*"*star)
+#Traditional method
+n=int(input())
+for i in range(1,n+1):
+    for s in range(n-i):
+        print(" ",end="")
+    for star in range(2*i-1):
+        print("*",end="")
+    print()
+#count vowels,consonants,digits and spaces in a string
+w=input()
+vowels=0
+consonants=0
+digit=0
+space=0
+for ch in w:
+    if ch in "aeiouAEIOU":
+        vowels+=1
+    elif ch.isalpha():
+        consonants+=1
+    elif ch.isdigit():
+        digit+=1
+    elif ch==" ":
+        space+=1
+print("vowels=",vowels)
+print("consonants=",consonants)
+print("Digit=",digit)
+print("Space=",space)
+#check whether two strings are anagram
+string1=input()
+str1=string1.lower()
+sort1="".join(sorted(str1))
+string2=input()
+str2=string2.lower()
+sort2="".join(sorted(str2))
+if sort1==sort2:
+    print("Anagram")
+else:
+    print("Not Anagram")
+#bitwise operaters
+a = 10
+b = 4
+print(a & b)
+print(a | b)
+print(~a)
+print(a ^ b)
+print(a >> 2)
+print(a << 2)
+#list :stores multiple values in one variable
+num=[10,20,30,40]
+for x in num:
+    print(x)
+#sum of elements in list
+nums=[10,20,30]
+total=0
+for x in nums:
+    total+=x
+print(total)"""
+#find largest element
+nums=[10,50,20,30]
+larg=nums[0]
+for x in nums:
+    if x >larg:
+        larg=x
+print(larg)
+
+
+
+
+
+
+    
+
+
+
 
 
         
