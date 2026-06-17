@@ -136,13 +136,108 @@ print(student["name"])
 #add to dictionary
 stud={"name":"sri","age":20}
 stud["city"]="Hyderabad"
-print(stud)"""
+print(stud)
 #user to enter values
 Name=input("Enter name:")
 Age=int(input("Enter Age:"))
 City=input("Enter your city:")
 student={"name":Name,"age":Age,"city":City}
 print(student)
+#loop through keys
+name=input()
+age=int(input())
+city=input()
+student={"name":name,"age":age,"city":city}
+for key in student:
+    print(key,student[key])
+#updating student data
+branch=input()
+student={"marks":93,"branch":branch}
+student["marks"]=99
+print(student)
+#check key exists
+student={"name":"sri","age":20}
+check=input()
+if check in student:
+    print("key found")  
+else:
+    print("key not found")
+#Count the frequency of each character in a string using a dictionary.
+s=input()
+freq={}
+for ch in s:
+    if ch in freq:
+        freq[ch]=freq[ch]+1
+    else:
+        freq[ch]=1
+print(freq)
+#Frequency of elements in a list
+li=[10,20,10,30,20,10]
+freq={}
+for x in li:
+    if x not in freq:
+        freq[x]=1
+    else:
+        freq[x]=freq[x]+1
+print(freq)
+#most freq element in a list
+list=[10,20,10,30,10]
+freq={}
+for x in list:
+    if x in freq:
+        freq[x]=freq[x]+1       
+    else:
+        freq[x]=1
+print(freq)
+lar_freq=0
+for k in freq:
+    if freq[k]>lar_freq:
+        lar_freq=freq[k]
+print(lar_freq)
+#most frequent char
+s=input()
+dict={}
+for i in s:
+    if i in dict:
+        dict[i]=dict[i]+1
+    else:
+        dict[i]=1
+print(dict)
+lar_freq=0
+for k in dict:
+    if dict[k]>lar_freq:
+        lar_freq=dict[k]
+print(lar_freq)
+#word freq
+sentence="i like python i like coding"
+word=sentence.split()
+freq={}
+for x in word:
+    if x not in freq:
+        freq[x]=1
+    else:
+        freq[x]=freq[x]+1
+print(freq)"""
+#find duplicate element in a list
+list=[10,20,10,20,40]
+seen=[]
+duplicate=[]
+for i in list:
+    if i not in seen:
+        seen.append(i)
+    elif i not in duplicate:
+        duplicate.append(i)
+print(duplicate)
+#find the non repeating char
+#count vowels:
+s=input
+
+    
+
+
+
+
+
 
 
 
