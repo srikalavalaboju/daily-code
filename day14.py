@@ -217,7 +217,7 @@ for x in word:
         freq[x]=1
     else:
         freq[x]=freq[x]+1
-print(freq)"""
+print(freq)
 #find duplicate element in a list
 list=[10,20,10,20,40]
 seen=[]
@@ -228,11 +228,165 @@ for i in list:
     elif i not in duplicate:
         duplicate.append(i)
 print(duplicate)
-#find the non repeating char
-#count vowels:
-s=input
+#first non repeating char
+s=input()
+freq={}
+for ch in s:
+    if ch not in freq:
+        freq[ch]=1
+    else:
+        freq[ch]=freq[ch]+1
+print(freq)
+for key,value in freq.items():
+    if value==1:
+        print(key)
+        break
+#anagram
+s=input()
+w=input()
+sort1=sorted(s)
+sort2=sorted(w)
+if sort1==sort2:
+    print("anagram")
+else:
+    print("not a anagram")"""
+"""
+set stores unique values only
 
-    
+s={10,20,10,30}
+print(s)
+#giving user input
+nums=[]
+for i in input().split():
+    nums.append(int(i))
+print(nums)
+#set:unordered collection of unique elements
+s={10,"sri",20,"kala"}
+print(s)
+#list to set
+lst=set([1,"sri",2,3])
+print(lst)
+#methods
+s={1,2,3}
+s1={3,2,4,5}
+s.add(6)#adding
+res=s.union(s1)#print(s|s1)
+print(s-s1)#difference
+print(s^s1)#removes the duplicates values itself
+print(s&s1)#intersection res=s.intersection(s1)#common
+s.clear()
+print(s)
+print(res)
+#Tuple:immutable ordered collection of elements
+tup=(0,1,"sri",3)
+t=tuple("mummy")
+print(tup)
+print(t)
+print(tup+t)
+print(t[1:3])
+del tup
+print(tup)
+#functions:block of code that performs a specific task
+#1.No parameters,no return
+def wel():
+    print("Welcome to python")
+wel()
+#parameters,no return:
+def par(a,b):
+    print(a+b)
+par(10,20)
+#no parameter,return
+def greet():
+    print(100)
+greet()
+#parameter,return
+def par_ret(a,b):
+    return a*b
+print(par_ret(5,4))
+#even or odd:
+def evenorodd(n):
+    if n%2==0:
+        return "even"
+    else:
+        return "odd"
+print(evenorodd(5))
+#larger number
+def large(a,b):
+    if a>b:
+        return a
+    elif a==b:
+
+    else:
+        return b
+print(large(10,25))
+#square
+def square(n):
+    return n**2
+n=int(input())
+print(square(n))
+#length of string
+def length(s):
+    return len(str(s))
+s=input()
+print(length(s))
+#factorial functions
+def factorial(n):
+    if n==0:
+        return 1
+    return (n)*factorial(n-1)
+n=int(input())
+print(factorial(n))
+#largest ele in a list
+def largest_ele(ele):
+    large=ele[0]
+    for i in range(1,len(ele)):      
+        if ele[i]>large:
+            large=ele[i]
+    return large
+ele=list(map(int,input().split()))
+print(largest_ele(ele))
+#smallest element in a list
+def small(lst):
+    small=lst[0]
+    for i in range(1,len(lst)):
+        if lst[i]<small:
+            small=lst[i]
+    return small
+lst=list(map(int,input().split()))
+print(small(lst))
+#reverse a string
+def reve(wrd):
+    reverse=""
+    for ch in range(len(wrd)-1,-1,-1):
+        reverse=reverse+wrd[ch]
+    return reverse       
+wrd=input()
+print(reve(wrd))
+#palindrome
+def palin(w):
+    reve=""
+    for ch in range(len(w)-1,-1,-1):
+        reve+=w[ch]
+    if w==reve:
+        return "palindrome"
+    else:
+        return "Not a palindrome"
+w=input()
+print(palin(w))
+#count upper &lower case letter
+def upp_low(s):
+    upp_count=0
+    low_count=0
+    for ch in s:
+        if ch.isupper():
+            upp_count+=1
+        elif ch.islower():
+            low_count+=1
+    return upp_count,low_count
+s=input()
+upper,lower=upp_low(s)
+print("Uppercase=",upper)
+print("lowercase=",lower)"""
 
 
 
@@ -247,4 +401,4 @@ s=input
 
 
 
-        
+       
