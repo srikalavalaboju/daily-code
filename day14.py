@@ -386,7 +386,154 @@ def upp_low(s):
 s=input()
 upper,lower=upp_low(s)
 print("Uppercase=",upper)
-print("lowercase=",lower)"""
+print("lowercase=",lower)
+#sum of digits 
+def sum_of_digits(dig):
+    rem=0
+    while dig>0:
+        digit=dig%10
+        rem+=digit
+        dig//=10
+    return rem
+dig=int(input())
+print(sum_of_digits(dig))
+#count the number of digits
+def count_digits(num):
+    count=0
+    while num>0:
+        digit=num%10
+        count+=1
+        num//=10
+    return count
+num=int(input())
+print(count_digits(num))
+#reverse a number
+def reverse_num(num): 
+    val="" 
+    while num>0:
+        dig=num%10
+        val+=str(dig)
+        num//=10        
+    return int(val)
+num=int(input())
+digit=reverse_num(num)
+print(digit,end="")
+#check prime number
+def prime(num):
+    count=0
+    for i in range(1,num+1):
+        if num%i==0:
+            count+=1
+    if count==2:
+        return "prime"
+    else:
+        return "Not prime"
+num=int(input())
+print(prime(num))
+#fibonacci series
+def fib(n):   
+    a=0
+    b=1
+    for i in range(n):
+        print(a,end=" ")
+        c=a+b
+        a,b=b,c
+n=int(input())
+fib(n)
+#GCD problem 
+def gcd(n,s):
+    if n<s:
+        small=n
+    else:
+        small=s
+    for i in range(1,small+1):
+        if n%i==0 and s%i==0:
+            gcd1=i
+    return gcd1
+n=int(input())
+s=int(input())
+print(gcd(n,s))
+#lcm problem
+def lcm(a,b):
+    if a>b:
+        larger=a
+    else:
+        larger=b    
+    while True:
+        if larger%a==0 and larger%b==0:
+            return larger
+        larger=larger+1
+a=int(input())
+b=int(input()) 
+print(lcm(a,b))
+#armstrong number
+def arm(n):
+    length=len(str(n))
+    rem=0
+    while n>0:
+        digit=n%10
+        rem=rem+digit**length
+        n=n//10
+    if n==rem:
+        return "Armstrong"
+    else:
+        return "Not a Armstrong"
+n=int(input())
+print(arm(n))
+#perfect number
+def perfect(n):
+    sum=0
+    for i in range(1,n):
+        if n%i==0:
+            sum+=i
+    if sum==n:
+        return "perfect Number"
+    else:
+        return "Not a perfect number"
+n=int(input())
+print(perfect(n))
+#strong number
+def strong(n):
+    original=n
+    sum=0
+    while n>0:
+        digit=n%10
+        fact=1
+        for i in range(1,digit+1):            
+            fact=fact*i
+        sum+=fact
+        n=n//10
+    if sum==original:
+        return "Strong Number"
+    else:
+        return "Not a strong number"
+n=int(input())
+print(strong(n))
+#automorphic number
+def auto(n):
+    original=n
+    leng=len(str(n))
+    squ=n*n
+    last=squ%(10**leng)
+    if last==original:
+        return "Automorphic number"
+    else:
+        return "Not automorphic number"    
+n=int(input())
+print(auto(n))"""
+#harshad number
+def harsh(n):
+    sum=0
+    original=n
+    dig=n%10
+    sum+=dig
+    n//=10
+    if n%sum==0:
+        return "Harshad Number"
+    else:
+        return "Not a Harshad Number"
+n=int(input())
+print(harsh(n))
 
 
 
